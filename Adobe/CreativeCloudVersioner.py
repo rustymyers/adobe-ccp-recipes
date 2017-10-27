@@ -224,7 +224,8 @@ class CreativeCloudVersioner(Processor):
                 'version_comparison_key': 'CFBundleShortVersionString',
             }]
         }
-
+        
+        self.env["installed_path"] = installed_path
         self.env["additional_pkginfo"] = pkginfo
         self.output("additional_pkginfo: %s" % self.env["additional_pkginfo"])
 
